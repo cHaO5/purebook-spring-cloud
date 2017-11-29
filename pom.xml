@@ -16,6 +16,7 @@
         <module>discovery</module>
         <module>service0</module>
         <module>service1</module>
+        <module>gateway</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -57,6 +58,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 	</dependencies>
 
