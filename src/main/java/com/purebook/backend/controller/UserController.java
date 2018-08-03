@@ -131,16 +131,16 @@ public class UserController {
 
     //推荐
     //推荐书
-    @RequestMapping(value = "{id}/recommandations/books", method = RequestMethod.GET)
-    public JsonResult recommandBook(@PathVariable String id) {
+    @RequestMapping(value = "{id}/recommendations/books", method = RequestMethod.GET)
+    public JsonResult recommendBook(@PathVariable String id) {
         List<Book> books = bookService.findFavourite(id);
         return UnifiedResult.result(books, ResultCode.NOT_FOUND);
     }
 
     //推荐书单
-    @RequestMapping(value = "{id}/recommandations/booklists", method = RequestMethod.GET)
-    public JsonResult recommmandBooklist(@PathVariable String id) {
-        List<BookList> bookLists = bookListService.recommandBooklist(id);
+    @RequestMapping(value = "{id}/recommendations/booklists", method = RequestMethod.GET)
+    public JsonResult recommmendBooklist(@PathVariable String id) {
+        List<BookList> bookLists = bookListService.recommendBooklist(id);
         return UnifiedResult.result(bookLists, ResultCode.NOT_FOUND);
     }
 }

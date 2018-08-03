@@ -51,7 +51,7 @@ public class BookListService {
         return booklistBookRepository.searchByBooklistId(userId, booklistId);
     }
 
-    public List<BookList> recommandBooklist(String userId) {
+    public List<BookList> recommendBooklist(String userId) {
         return RandomList.getRandomList(bookListRepository.findByUserId(userId), 10);
     }
 }
